@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Draggable from 'react-draggable';
 import Pointer from '../../components/Pointer/index.tsx';
 import './index.scss';
 
@@ -25,13 +26,11 @@ const Home: React.FC = () => {
 		setMousePosition({ x: event.clientX, y: event.clientY });
 	};
 
-
-
 	return (
 		<div className='home-container' onMouseMove={handleMouseMove}>
 			<Pointer x={mousePosition.x} y={mousePosition.y} />
 			<div className='home-content'>
-				<p className='home-wait'>{typedText}</p>
+				<Draggable><p className='home-wait'>{typedText}</p></Draggable>
 			</div>
 		</div>
 	);
