@@ -1,0 +1,28 @@
+@import '../../sass/index.scss';
+
+.home-container {
+    background-color: $bg-1;
+    cursor: none;
+
+    .home-content {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .home-wait {
+            font-size: 13rem;
+            color: $primary;
+            animation: glow 2s ease-in-out infinite alternate;
+
+            @keyframes glow {
+                from {
+                    text-shadow: 0 0 5px $secondary, 0 0 10px $secondary;
+                }
+                to {
+                    text-shadow: none;
+                }
+            }
+        }
+    }
+}

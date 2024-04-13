@@ -1,0 +1,32 @@
+@import '../../sass/index.scss';
+
+.pointer-container {
+    .pointer, .pointer-out {
+        position: absolute;
+        border-radius: 50%;
+
+        &.show {
+            display: block;
+        }
+
+        &.hide {
+            display: none;
+        }
+    }
+
+    .pointer {
+        width: 0.5rem;
+        height: 0.5rem;
+        background-color: $bg-2;
+        z-index: 9999;
+    }
+    
+    .pointer-out {
+        width: 1.5rem;
+        height: 1.5rem;
+        border: 2px solid $bg-2;
+        background-color: transparent;
+        z-index: 9998;
+        transition: transform 0.15s linear;
+    }
+}
