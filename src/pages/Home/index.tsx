@@ -14,7 +14,7 @@ const Home: React.FC = () => {
 		if (index < text.length) {
 		  setTypedText(prevTypedText => prevTypedText + text.charAt(index));
 		  index++;
-		  setTimeout(typeText, 100); // Ajuste a velocidade da digitação aqui (em milissegundos)
+		  setTimeout(typeText, 100);
 		}
 	  };
   
