@@ -16,17 +16,23 @@ The website was created using:
 
 ## **Installation and Requirements**
 
-If, for some mysterious reason that I, as a poor human, cannot understand, you would like to clone this website instead of simply clicking on the [link]() at the top of the page (which I highly recommend), follow these steps:
+If, for some mysterious reason that I, as a poor human, cannot understand, you would like to clone this website instead of **simply clicking on the [link](https://andrei-rech.vercel.app/) at the top of the page** *(which I highly recommend)*, follow these steps:
+
+--- 
 
 ### *Install Node*
 
 You can install it by clicking → [Node](https://nodejs.org/en)
 
+--- 
+
 ### *Clone the git repository*
 
-Navigate to the directory where you want to clone the repository and paste the [URL]().
+Navigate to the directory where you want to clone the repository and paste the [URL](https://github.com/AndreiRech/Website).
 
-`git clone https://github.com/AndreiRech/`
+`git clone https://github.com/AndreiRech/Website`
+
+--- 
 
 ### *Install the dependencies*
 
@@ -34,8 +40,12 @@ Use the following command to install all the necessary dependencies:
 
 `npm install`
 
+--- 
+
 ### *Run the program*
 
 Start and have fun!
 
 `npm start`
+
+--- 
