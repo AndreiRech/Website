@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Pointer from '../../components/Pointer/index.tsx';
 import './index.scss';
@@ -12,17 +12,23 @@ const Home: React.FC = () => {
 		setMousePosition({ x: event.clientX, y: event.clientY });
 	};
 
+	const handlePageChange = useCallback((page: string) => {
+		navigate(page);
+	}, [navigate]);
+
 	const handleKey = useCallback((event: KeyboardEvent) => {
 		const actions: { [key: string]: () => void } = {
-			'ArrowRight': () => handlePageChange('/options'),
+			'ArrowRight': () => navigate('/options'),
 			'ArrowDown': () => setSelectedOption(true),
 			'ArrowUp': () => setSelectedOption(false),
 			'Enter': () => handlePageChange('/options'),
 		};
 
 		const action = actions[event.key];
-		if (action) action();
-	}, [navigate]);
+		if (action) {
+			action();
+		}
+	}, [navigate, handlePageChange]);
 
 	useEffect(() => {
 		window.addEventListener('keydown', handleKey);
@@ -32,23 +38,17 @@ const Home: React.FC = () => {
 		};
 	}, [handleKey]);
 
-	const handlePageChange = (page: string) => {
-        navigate(page);
-    };
-
 	return (
 		<div className='home-container' onMouseMove={handleMouseMove}>
 			<Pointer x={mousePosition.x} y={mousePosition.y} />
-			<div className='home-border'>
-				<div className='home-content'>
-					<div className='home-main'>
-						<p className='home-title-jap'>いらしゃいませ</p>
-						<p className='home-title'>welcome</p>
-					</div>
-					<div className='home-bottom'>
-						<p className={`home-options ${selectedOption ? 'selected' : ''}`} onClick={() => handlePageChange('/options')}>options</p>
-						<p className='home-navigate'>← use arrows to navigate →</p>
-					</div>
+			<div className='home-content'>
+				<div className='home-main'>
+					<p className='home-title-jap'>いらしゃいませ</p>
+					<p className='home-title'>welcome</p>
+				</div>
+				<div className='home-bottom'>
+					<p className={`home-options ${selectedOption ? 'selected' : ''}`} onClick={() => handlePageChange('/options')}>options</p>
+					<p className='home-navigate'>← use arrows to navigate →</p>
 				</div>
 			</div>
 		</div>
