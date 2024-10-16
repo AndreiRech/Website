@@ -52,7 +52,7 @@
                 transition: color 0.3s ease, transform 0.3s ease;
                 color: $grey;
 
-                &:hover {
+                &:hover, &.selected {
                     color: $primary;
                     transform: scale(1.2);
                 }
