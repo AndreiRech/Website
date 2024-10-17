@@ -2,9 +2,10 @@
 
 .option-container {
     background-color: $snow;
-    cursor: none;
     position: relative;
-        
+    overflow: hidden;
+    cursor: none;
+    
     .option-content {
         font-family: $font1;
         height: 100vh;
@@ -13,7 +14,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        position: relative;
 
         .option-top {
             display: flex;
@@ -26,29 +26,39 @@
                 justify-content: center;
                 align-items: center;
 
-                .card-title-jap {
+                .card-title-jap, .card-title-jap-ex, .card-title-jap-res {
                     color: $primary;
                     font-family: $font2;
                     font-weight: 700;
                 }
             
-                .card-title {
+                .card-title, .card-title-res, .card-title-ex {
                     position: absolute;
                     color: $secondary;
                     font-style: italic;
                 }
+
+                .card-title-res, .card-title-ex {
+                    word-break: break-word;
+                    position: relative;
+                }
+
+                .card-title-jap-res, .card-title-jap-ex{
+                    word-break: break-word;
+                    position: absolute;
+                }
             }
 
             .card-options {
-                font-size: 10rem;
+                font-size: 8vw;
             }
 
             .card-restore {
-                font-size: 5rem;
+                font-size: 4vw;
             }
 
             .card-exit {
-                font-size: 4rem;
+                font-size: 4vw;
             }
         }
 
@@ -63,13 +73,20 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                gap: 5vw;
 
                 .card-color, .card-background {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
+                }
+
+                .option-color-box {
+                    transform: rotate(-18.85deg);
+                }
+
+                .option-background-box {
+                    transform: rotate(13.63deg);
                 }
 
                 .card-color-top, .card-background-top {
@@ -87,12 +104,28 @@
                     color: $secondary;
                 }
 
-                .card-color-title, .card-background-title {
-                    font-size: 4rem;
+                .card-color-title, .card-background-title, .card-color-jap, .card-background-jap {
+                    font-size: 4vw;
                 }
 
-                .card-color-jap, .card-background-jap, .card-text {
-                    font-size: 3rem;
+                .card-color-jap, .card-background-jap {
+                    font-weight: 700;
+                }
+
+                .card-text {
+                    color: $grey;
+                    font-size: 3vw;
+                }
+
+                .card-background-bottom, .card-color-bottom {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+
+                    .svg-sun, .svg-moon {
+                        margin: 2vh 0;
+                    }
                 }
             }
 
@@ -106,18 +139,19 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    font-size: 8rem;
+                    font-size: 6vw;
 
                     .card-title-jap {
                         color: $primary;
                         font-family: $font2;
                         font-weight: 700;
+                        position: absolute;
                     }
                 
                     .card-title {
-                        position: absolute;
                         color: $secondary;
                         font-style: italic;
+                        z-index: 1;
                     }
                 }
                 
@@ -126,9 +160,10 @@
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    font-size: 5rem;
+                    font-size: 4vw;
 
                     .card-text {
+                        color: $grey;
                         margin: 0 1rem;
                     }
                 }
