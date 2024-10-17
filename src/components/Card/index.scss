@@ -1,0 +1,20 @@
+@import '../../sass/index.scss';
+
+.card-container {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 1rem;
+
+    &.grey {
+        border: 0.4rem solid $grey;
+    }
+
+    &.snow {
+        border: 0.4rem solid $snow;
+    }
+}
