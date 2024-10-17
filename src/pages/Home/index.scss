@@ -2,8 +2,9 @@
 
 .home-container {
     background-color: $snow;
-    cursor: none;
     position: relative;
+    overflow: hidden;
+    cursor: none;
 
     .home-content {
         font-family: $font1;
@@ -13,14 +14,13 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        position: relative;
 
         .home-main {
             width: 100vw;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 14.35rem;
+            font-size: 14vw;
 
             .home-title-jap {
                 color: $primary;
@@ -32,7 +32,7 @@
                 position: absolute;
                 color: $secondary;
                 font-style: italic;
-                padding-top: 1rem;
+                padding-top: 2vh;
             }
         }
 
@@ -45,7 +45,7 @@
             justify-content: center;
             align-items: center;
 
-            font-size: 3.1rem;
+            font-size: 3vw;
             color: $grey;
 
             .home-options {

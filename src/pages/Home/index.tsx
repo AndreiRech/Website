@@ -43,17 +43,18 @@ const Home: React.FC = () => {
 	return (
 		<div className='home-container' onMouseMove={handleMouseMove}>
 			<Pointer x={mousePosition.x} y={mousePosition.y}/>
-			<Box color='grey'></Box>
-			<div className='home-content'>
-				<div className='home-main'>
-					<p className='home-title-jap'>いらしゃいませ</p>
-					<p className='home-title'>welcome</p>
+			<Box color='grey'>
+				<div className='home-content'>
+					<div className='home-main'>
+						<p className='home-title-jap'>いらしゃいませ</p>
+						<p className='home-title'>welcome</p>
+					</div>
+					<div className='home-bottom'>
+						<p className={`home-options ${selectedOption ? 'selected' : ''}`} onClick={() => handlePageChange('/options')}>options</p>
+						<p className='home-navigate'>← use arrows to navigate →</p>
+					</div>
 				</div>
-				<div className='home-bottom'>
-					<p className={`home-options ${selectedOption ? 'selected' : ''}`} onClick={() => handlePageChange('/options')}>options</p>
-					<p className='home-navigate'>← use arrows to navigate →</p>
-				</div>
-			</div>
+			</Box>
 		</div>
 	);
 }
