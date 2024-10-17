@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Pointer from '../../components/Pointer/index.tsx';
 import './index.scss';
+import Box from '../../components/Box/index.tsx';
 
 const Home: React.FC = () => {
 	const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -18,7 +19,8 @@ const Home: React.FC = () => {
 
 	const handleKey = useCallback((event: KeyboardEvent) => {
 		const actions: { [key: string]: () => void } = {
-			'ArrowRight': () => navigate('/options'),
+			'ArrowLeft': () => navigate('/options'),
+			'ArrowRight': () => navigate('/about'),
 			'ArrowDown': () => setSelectedOption(true),
 			'ArrowUp': () => setSelectedOption(false),
 			'Enter': () => handlePageChange('/options'),
@@ -40,7 +42,8 @@ const Home: React.FC = () => {
 
 	return (
 		<div className='home-container' onMouseMove={handleMouseMove}>
-			<Pointer x={mousePosition.x} y={mousePosition.y} />
+			<Pointer x={mousePosition.x} y={mousePosition.y}/>
+			<Box color='grey'></Box>
 			<div className='home-content'>
 				<div className='home-main'>
 					<p className='home-title-jap'>いらしゃいませ</p>

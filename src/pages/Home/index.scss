@@ -53,7 +53,7 @@
                 color: $grey;
 
                 &:hover, &.selected {
-                    color: $primary;
+                    color: $secondary;
                     transform: scale(1.2);
                 }
             }
