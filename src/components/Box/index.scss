@@ -1,14 +1,15 @@
 @import '../../sass/index.scss';
 
 .box-container {
-    width: 92vw;
-    height: 87vh;
     box-sizing: border-box;
-    position: absolute;
-    top: 50%;       
-    left: 50%;       
-    transform: translate(-50%, -50%);
     z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 
     &.grey {
         border: 1rem solid $grey;

@@ -3,11 +3,14 @@ import './index.scss';
 
 interface BoxProps {
   color: 'grey' | 'snow';
+  children?: React.ReactNode;
 }
 
-const Box: React.FC<BoxProps> = ({ color }) => {
+const Box: React.FC<BoxProps> = ({ color, children }) => {
   return (
-    <div className={`box-container ${color}`}/>
+    <div className={`box-container ${color}`}>
+      {children}
+    </div>
   );
 };
 
