@@ -18,16 +18,30 @@
     .pointer {
         width: 0.5rem;
         height: 0.5rem;
-        background-color: $grey;
         z-index: 9999;
+
+        &.grey {
+            background-color: $grey;
+        }
+
+        &.snow {
+            background-color: $snow;
+        }
     }
     
     .pointer-out {
         width: 1.5rem;
         height: 1.5rem;
-        border: 2px solid $grey;
         background-color: transparent;
         z-index: 9998;
         transition: transform 0.15s linear;
+
+        &.grey {
+            border: 2px solid $grey;
+        }
+
+        &.snow {
+            border: 2px solid $snow;
+        }
     }
 }
