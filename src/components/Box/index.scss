@@ -1,0 +1,20 @@
+@import '../../sass/index.scss';
+
+.box-container {
+    width: 92vw;
+    height: 87vh;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;       
+    left: 50%;       
+    transform: translate(-50%, -50%);
+    z-index: 0;
+
+    &.grey {
+        border: 1rem solid $grey;
+    }
+
+    &.snow {
+        border: 1rem solid $snow;
+    }
+}
