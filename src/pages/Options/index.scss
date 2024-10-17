@@ -1,2 +1,138 @@
 @import '../../sass/index.scss';
 
+.option-container {
+    background-color: $snow;
+    cursor: none;
+    position: relative;
+        
+    .option-content {
+        font-family: $font1;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        .option-top {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+
+            .card-options, .card-restore, .card-exit {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .card-title-jap {
+                    color: $primary;
+                    font-family: $font2;
+                    font-weight: 700;
+                }
+            
+                .card-title {
+                    position: absolute;
+                    color: $secondary;
+                    font-style: italic;
+                }
+            }
+
+            .card-options {
+                font-size: 10rem;
+            }
+
+            .card-restore {
+                font-size: 5rem;
+            }
+
+            .card-exit {
+                font-size: 4rem;
+            }
+        }
+
+        .option-bottom {
+            margin-top: 5vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+
+            .option-colors {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 5vw;
+
+                .card-color, .card-background {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .card-color-top, .card-background-top {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .card-color-title, .card-background-jap {
+                    color: $primary;
+                }
+
+                .card-color-jap, .card-background-title {
+                    color: $secondary;
+                }
+
+                .card-color-title, .card-background-title {
+                    font-size: 4rem;
+                }
+
+                .card-color-jap, .card-background-jap, .card-text {
+                    font-size: 3rem;
+                }
+            }
+
+            .card-language {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .card-language-title {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 8rem;
+
+                    .card-title-jap {
+                        color: $primary;
+                        font-family: $font2;
+                        font-weight: 700;
+                    }
+                
+                    .card-title {
+                        position: absolute;
+                        color: $secondary;
+                        font-style: italic;
+                    }
+                }
+                
+                .card-language-body {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 5rem;
+
+                    .card-text {
+                        margin: 0 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
