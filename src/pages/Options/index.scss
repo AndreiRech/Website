@@ -19,7 +19,9 @@
             display: flex;
             flex-direction: row;
             justify-content: space-around;
+            height: 20vh;
             width: 100%;
+            padding-top: 2vh;
 
             .card-options, .card-restore, .card-exit {
                 display: flex;
@@ -38,23 +40,33 @@
                     font-style: italic;
                 }
 
-                .card-title-res, .card-title-ex {
+                .card-title-res {
                     word-break: break-word;
                     position: relative;
+                    align-items: center;
+                    justify-content: center;
+                    align-self: center;
+                    margin-left: 3vw;
                 }
 
-                .card-title-jap-res, .card-title-jap-ex{
+                .card-title-jap-res{
                     word-break: break-word;
                     position: absolute;
+                }
+
+                .card-title-ex {
+                    margin: 0 1vw 0 0;
                 }
             }
 
             .card-options {
                 font-size: 8vw;
+                width: 55vw;
             }
 
             .card-restore {
                 font-size: 4vw;
+                width: 20vw;
             }
 
             .card-exit {
@@ -63,7 +75,7 @@
         }
 
         .option-bottom {
-            margin-top: 5vh;
+            padding: 5vh 0;
             display: flex;
             flex-direction: row;
             justify-content: space-around;
@@ -123,8 +135,8 @@
                     align-items: center;
                     flex-direction: column;
 
-                    .svg-sun, .svg-moon {
-                        margin: 2vh 0;
+                    .svg-moon {
+                        margin: 3vh 0;
                     }
                 }
             }
@@ -152,6 +164,7 @@
                         color: $secondary;
                         font-style: italic;
                         z-index: 1;
+                        padding: 0 1vw 0 0;
                     }
                 }
                 
@@ -162,9 +175,13 @@
                     align-items: center;
                     font-size: 4vw;
 
-                    .card-text {
+                    .card-text, .card-text-jap {
                         color: $grey;
                         margin: 0 1rem;
+                    }
+
+                    .card-text-jap {
+                        font-weight: 700;
                     }
                 }
             }

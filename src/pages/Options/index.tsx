@@ -4,7 +4,9 @@ import Pointer from '../../components/Pointer/index.tsx';
 import './index.scss';
 import Box from '../../components/Box/index.tsx';
 import Card from '../../components/Card/index.tsx';
+// @ts-ignore  
 import { ReactComponent as Moon } from '../../assets/icons/moon.svg';
+// @ts-ignore  
 import { ReactComponent as Sun } from '../../assets/icons/sun.svg';
 
 const Options: React.FC = () => {
@@ -54,7 +56,7 @@ const Options: React.FC = () => {
 						</Card>
 						<Card color='grey'>
 							<div className='card-exit'>
-								<p className='card-title-jap-ex'>出かける</p>
+								<p className='card-title-jap-ex'>戻る</p>
 								<p className='card-title-ex'>exit</p>
 							</div>
 						</Card>
@@ -100,7 +102,7 @@ const Options: React.FC = () => {
 									<p className='card-text'>english</p>
 									<p className='card-text'>portugues</p>
 									<p className='card-text'>espanol</p>
-									<p className='card-text'>日本語</p>
+									<p className='card-text-jap'>日本語</p>
 								</div>
 							</div>
 						</Card>
