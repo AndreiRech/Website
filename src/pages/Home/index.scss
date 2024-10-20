@@ -1,26 +1,60 @@
 @import '../../sass/index.scss';
 
 .home-container {
-    background-color: $bg-1;
+    background-color: $snow;
+    position: relative;
+    overflow: hidden;
     cursor: none;
 
     .home-content {
+        font-family: $font1;
         height: 100vh;
+        width: 100vw;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
+        justify-content: center;
 
-        .home-wait {
-            font-size: 13rem;
-            color: $primary;
-            animation: glow 2s ease-in-out infinite alternate;
+        .home-main {
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14vw;
 
-            @keyframes glow {
-                from {
-                    text-shadow: 0 0 5px $secondary, 0 0 10px $secondary;
-                }
-                to {
-                    text-shadow: none;
+            .home-title-jap {
+                color: $primary;
+                font-family: $font2;
+                font-weight: 700;
+            }
+
+            .home-title {
+                position: absolute;
+                color: $secondary;
+                font-style: italic;
+                padding-top: 2vh;
+            }
+        }
+
+        .home-bottom {
+            position: absolute;
+            bottom: 10vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 3vw;
+            color: $grey;
+
+            .home-options {
+                transition: color 0.3s ease, transform 0.3s ease;
+                color: $grey;
+
+                &:hover, &.selected {
+                    color: $secondary;
+                    transform: scale(1.2);
                 }
             }
         }

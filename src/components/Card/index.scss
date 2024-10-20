@@ -1,0 +1,19 @@
+@import '../../sass/index.scss';
+
+.card-container {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+    padding: 1rem;
+    background-color: $snow;
+
+    &.grey {
+        border: 0.4rem solid $grey;
+    }
+
+    &.snow {
+        border: 0.4rem solid $snow;
+    }
+}

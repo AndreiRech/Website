@@ -1,0 +1,21 @@
+@import '../../sass/index.scss';
+
+.box-container {
+    box-sizing: border-box;
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    &.grey {
+        border: 1rem solid $grey;
+    }
+
+    &.snow {
+        border: 1rem solid $snow;
+    }
+}

@@ -1,0 +1,190 @@
+@import '../../sass/index.scss';
+
+.option-container {
+    background-color: $snow;
+    position: relative;
+    overflow: hidden;
+    cursor: none;
+    
+    .option-content {
+        font-family: $font1;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .option-top {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            height: 20vh;
+            width: 100%;
+            padding-top: 2vh;
+
+            .card-options, .card-restore, .card-exit {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .card-title-jap, .card-title-jap-ex, .card-title-jap-res {
+                    color: $primary;
+                    font-family: $font2;
+                    font-weight: 700;
+                }
+            
+                .card-title, .card-title-res, .card-title-ex {
+                    position: absolute;
+                    color: $secondary;
+                    font-style: italic;
+                }
+
+                .card-title-res {
+                    word-break: break-word;
+                    position: relative;
+                    align-items: center;
+                    justify-content: center;
+                    align-self: center;
+                    margin-left: 3vw;
+                }
+
+                .card-title-jap-res{
+                    word-break: break-word;
+                    position: absolute;
+                }
+
+                .card-title-ex {
+                    margin: 0 1vw 0 0;
+                }
+            }
+
+            .card-options {
+                font-size: 8vw;
+                width: 55vw;
+            }
+
+            .card-restore {
+                font-size: 4vw;
+                width: 20vw;
+            }
+
+            .card-exit {
+                font-size: 4vw;
+            }
+        }
+
+        .option-bottom {
+            padding: 5vh 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+
+            .option-colors {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .card-color, .card-background {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .option-color-box {
+                    transform: rotate(-18.85deg);
+                }
+
+                .option-background-box {
+                    transform: rotate(13.63deg);
+                }
+
+                .card-color-top, .card-background-top {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .card-color-title, .card-background-jap {
+                    color: $primary;
+                }
+
+                .card-color-jap, .card-background-title {
+                    color: $secondary;
+                }
+
+                .card-color-title, .card-background-title, .card-color-jap, .card-background-jap {
+                    font-size: 4vw;
+                }
+
+                .card-color-jap, .card-background-jap {
+                    font-weight: 700;
+                }
+
+                .card-text {
+                    color: $grey;
+                    font-size: 3vw;
+                }
+
+                .card-background-bottom, .card-color-bottom {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+
+                    .svg-moon {
+                        margin: 3vh 0;
+                    }
+                }
+            }
+
+            .card-language {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .card-language-title {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 6vw;
+
+                    .card-title-jap {
+                        color: $primary;
+                        font-family: $font2;
+                        font-weight: 700;
+                        position: absolute;
+                    }
+                
+                    .card-title {
+                        color: $secondary;
+                        font-style: italic;
+                        z-index: 1;
+                        padding: 0 1vw 0 0;
+                    }
+                }
+                
+                .card-language-body {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 4vw;
+
+                    .card-text, .card-text-jap {
+                        color: $grey;
+                        margin: 0 1rem;
+                    }
+
+                    .card-text-jap {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
