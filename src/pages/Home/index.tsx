@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Pointer from '../../components/Pointer/index.tsx';
 import './index.scss';
 import Box from '../../components/Box/index.tsx';
+import Card from '../../components/Card/index.tsx';
 
 const Home: React.FC = () => {
 	const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
