@@ -11,6 +11,7 @@ import { ReactComponent as Sun } from '../../assets/icons/sun.svg';
 
 const Options: React.FC = () => {
 	const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+	const [selectedOption, setSelectedOption] = useState(false);
 	const navigate = useNavigate();
 	
   	const handleMouseMove = (event: React.MouseEvent) => {
@@ -49,7 +50,7 @@ const Options: React.FC = () => {
 							</div>
 						</Card>
 						<Card color='grey'>
-							<div className='card-restore'>
+							<div className={`card-restore ${selectedOption ? 'selected' : ''}`}>
 								<p className='card-title-jap-res'>復元</p>
 								<p className='card-title-res'>restore settings</p>
 							</div>
